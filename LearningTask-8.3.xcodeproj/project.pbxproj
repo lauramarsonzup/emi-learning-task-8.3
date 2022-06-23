@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		5840B53728646180000FA9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B53628646180000FA9FC /* AppDelegate.swift */; };
 		5840B53928646180000FA9FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B53828646180000FA9FC /* SceneDelegate.swift */; };
-		5840B53B28646180000FA9FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B53A28646180000FA9FC /* ViewController.swift */; };
 		5840B53E28646180000FA9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5840B53C28646180000FA9FC /* Main.storyboard */; };
 		5840B54028646186000FA9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5840B53F28646186000FA9FC /* Assets.xcassets */; };
 		5840B54328646186000FA9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5840B54128646186000FA9FC /* LaunchScreen.storyboard */; };
+		5840B54B28646211000FA9FC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B54A28646211000FA9FC /* Theme.swift */; };
+		5840B54D28646286000FA9FC /* AutoresAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B54C28646286000FA9FC /* AutoresAPI.swift */; };
+		5840B54F286462A3000FA9FC /* LivrosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B54E286462A3000FA9FC /* LivrosAPI.swift */; };
+		5840B551286462C0000FA9FC /* Autor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B550286462C0000FA9FC /* Autor.swift */; };
+		5840B553286462D4000FA9FC /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B552286462D4000FA9FC /* Livro.swift */; };
+		5840B55B2864643F000FA9FC /* LivrosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B55A2864643F000FA9FC /* LivrosListViewController.swift */; };
+		5840B55E2864660F000FA9FC /* LivroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B55D2864660F000FA9FC /* LivroCollectionViewCell.swift */; };
+		5840B5602864669C000FA9FC /* LivroSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B55F2864669C000FA9FC /* LivroSectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5840B53328646180000FA9FC /* LearningTask-8.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-8.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5840B53628646180000FA9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5840B53828646180000FA9FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5840B53A28646180000FA9FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5840B53D28646180000FA9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5840B53F28646186000FA9FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5840B54228646186000FA9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5840B54428646186000FA9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5840B54A28646211000FA9FC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		5840B54C28646286000FA9FC /* AutoresAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoresAPI.swift; sourceTree = "<group>"; };
+		5840B54E286462A3000FA9FC /* LivrosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivrosAPI.swift; sourceTree = "<group>"; };
+		5840B550286462C0000FA9FC /* Autor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autor.swift; sourceTree = "<group>"; };
+		5840B552286462D4000FA9FC /* Livro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
+		5840B55A2864643F000FA9FC /* LivrosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivrosListViewController.swift; sourceTree = "<group>"; };
+		5840B55D2864660F000FA9FC /* LivroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroCollectionViewCell.swift; sourceTree = "<group>"; };
+		5840B55F2864669C000FA9FC /* LivroSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivroSectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,78 @@
 		5840B53528646180000FA9FC /* LearningTask-8.3 */ = {
 			isa = PBXGroup;
 			children = (
+				5840B55828646384000FA9FC /* Supportive Files */,
+				5840B53F28646186000FA9FC /* Assets.xcassets */,
+				5840B55728646381000FA9FC /* API */,
+				5840B5562864637C000FA9FC /* Models */,
+				5840B55428646372000FA9FC /* View */,
+				5840B55528646377000FA9FC /* Scenes */,
+			);
+			path = "LearningTask-8.3";
+			sourceTree = "<group>";
+		};
+		5840B55428646372000FA9FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5840B53C28646180000FA9FC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5840B55528646377000FA9FC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5840B55928646428000FA9FC /* ListaDeLivros */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5840B5562864637C000FA9FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5840B550286462C0000FA9FC /* Autor.swift */,
+				5840B552286462D4000FA9FC /* Livro.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5840B55728646381000FA9FC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5840B54C28646286000FA9FC /* AutoresAPI.swift */,
+				5840B54E286462A3000FA9FC /* LivrosAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5840B55828646384000FA9FC /* Supportive Files */ = {
+			isa = PBXGroup;
+			children = (
 				5840B53628646180000FA9FC /* AppDelegate.swift */,
 				5840B53828646180000FA9FC /* SceneDelegate.swift */,
-				5840B53A28646180000FA9FC /* ViewController.swift */,
-				5840B53C28646180000FA9FC /* Main.storyboard */,
-				5840B53F28646186000FA9FC /* Assets.xcassets */,
+				5840B54A28646211000FA9FC /* Theme.swift */,
 				5840B54128646186000FA9FC /* LaunchScreen.storyboard */,
 				5840B54428646186000FA9FC /* Info.plist */,
 			);
-			path = "LearningTask-8.3";
+			name = "Supportive Files";
+			sourceTree = "<group>";
+		};
+		5840B55928646428000FA9FC /* ListaDeLivros */ = {
+			isa = PBXGroup;
+			children = (
+				5840B55A2864643F000FA9FC /* LivrosListViewController.swift */,
+				5840B55C286465FB000FA9FC /* View */,
+			);
+			path = ListaDeLivros;
+			sourceTree = "<group>";
+		};
+		5840B55C286465FB000FA9FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5840B55D2864660F000FA9FC /* LivroCollectionViewCell.swift */,
+				5840B55F2864669C000FA9FC /* LivroSectionHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +215,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5840B53B28646180000FA9FC /* ViewController.swift in Sources */,
+				5840B551286462C0000FA9FC /* Autor.swift in Sources */,
+				5840B553286462D4000FA9FC /* Livro.swift in Sources */,
+				5840B54D28646286000FA9FC /* AutoresAPI.swift in Sources */,
+				5840B55B2864643F000FA9FC /* LivrosListViewController.swift in Sources */,
+				5840B54F286462A3000FA9FC /* LivrosAPI.swift in Sources */,
+				5840B54B28646211000FA9FC /* Theme.swift in Sources */,
 				5840B53728646180000FA9FC /* AppDelegate.swift in Sources */,
 				5840B53928646180000FA9FC /* SceneDelegate.swift in Sources */,
+				5840B55E2864660F000FA9FC /* LivroCollectionViewCell.swift in Sources */,
+				5840B5602864669C000FA9FC /* LivroSectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PPv-UE-OYf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="yJv-PD-qMr">
+            <objects>
+                <navigationController id="PPv-UE-OYf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="G6h-Jm-Bdk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="Texas Rose"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="Texas Rose"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JtD-5n-OcP" kind="relationship" relationship="rootViewController" id="Kfn-n4-oq2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Th-jh-QOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858" y="-104"/>
+        </scene>
+        <!--Livros List View Controller-->
+        <scene sceneID="jwb-ZI-wqQ">
+            <objects>
+                <collectionViewController id="JtD-5n-OcP" customClass="LivrosListViewController" customModule="LearningTask_8_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="p6A-Yt-GLA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Pampas"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="24" minimumInteritemSpacing="20" id="A1d-GR-Hel">
+                            <size key="itemSize" width="180" height="302"/>
+                            <size key="headerReferenceSize" width="0.0" height="48"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LivroCollectionViewCell" id="ow6-O2-5bw" customClass="LivroCollectionViewCell" customModule="LearningTask_8_3" customModuleProvider="target">
+                                <rect key="frame" x="117" y="68" width="180" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kmH-vc-elQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="302"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-Mz-Eq4" userLabel="Content Container Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="302"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qFW-ie-V9f" userLabel="Capa do Livro Image View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="254"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="qFW-ie-V9f" secondAttribute="height" multiplier="1:1.41" id="0VE-ei-3U7"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do Livro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXg-v6-TNZ" userLabel="Nome do Livro Label">
+                                                    <rect key="frame" x="0.0" y="254" width="180" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="DOb-Mz-Eq4" secondAttribute="bottom" id="GtV-65-Gbl"/>
+                                        <constraint firstAttribute="trailing" secondItem="DOb-Mz-Eq4" secondAttribute="trailing" id="WGz-JG-yff"/>
+                                        <constraint firstItem="DOb-Mz-Eq4" firstAttribute="leading" secondItem="kmH-vc-elQ" secondAttribute="leading" id="bhz-h4-jrh"/>
+                                        <constraint firstItem="DOb-Mz-Eq4" firstAttribute="top" secondItem="kmH-vc-elQ" secondAttribute="top" id="xGF-2O-9ag"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="180" height="302"/>
+                                <connections>
+                                    <outlet property="capaImageView" destination="qFW-ie-V9f" id="R84-P5-9bF"/>
+                                    <outlet property="tituloLabel" destination="hXg-v6-TNZ" id="5r0-Qx-JEp"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="LivroSectionHeaderView" id="Jcu-Cw-eyA" customClass="LivroSectionHeaderView" customModule="LearningTask_8_3" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título da Seção" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsm-O9-wYB" userLabel="Título Label">
+                                    <rect key="frame" x="20" y="18.5" width="374" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.66666666669999997" blue="0.37647058820000001" alpha="0.74597046710000003" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Xsm-O9-wYB" firstAttribute="leading" secondItem="Jcu-Cw-eyA" secondAttribute="leading" constant="20" id="2oN-Ik-qC0"/>
+                                <constraint firstAttribute="bottom" secondItem="Xsm-O9-wYB" secondAttribute="bottom" constant="8" id="4f5-zy-qen"/>
+                                <constraint firstAttribute="trailing" secondItem="Xsm-O9-wYB" secondAttribute="trailing" constant="20" id="b1q-yd-b90"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="tituloLabel" destination="Xsm-O9-wYB" id="jhm-rT-5s9"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="JtD-5n-OcP" id="sdB-EZ-lLz"/>
+                            <outlet property="delegate" destination="JtD-5n-OcP" id="hbb-8q-Lzy"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="jUx-wp-mmV"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1E-g4-qWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="79"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Pampas">
+            <color red="0.98431372549019602" green="0.98039215686274506" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Texas Rose">
+            <color red="1" green="0.66699999570846558" blue="0.37599998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
