@@ -1,6 +1,6 @@
 //
 //  LivrosListViewController.swift
-//  LearningTask-7.3
+//  LearningTask-8.3
 //
 //  Created by rafael.rollo on 23/06/2022.
 //
@@ -58,12 +58,12 @@ extension LivrosListViewController {
     }
     
     private func configureReusableHeaderView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "LivroSectionHeaderView", for: indexPath) as? LivroSectionHeaderView else {
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "LivroSectionHeaderView", for: indexPath) as? LivroSectionHeaderView else {
             fatalError("Não foi possível recuperar view para o titulo da seção")
         }
         
-        header.titulo = "Todos os Livros"
-        return header
+        headerView.titulo = "Todos os Livros"
+        return headerView
     }
     
 }

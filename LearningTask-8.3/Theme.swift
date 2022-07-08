@@ -14,7 +14,7 @@ protocol ThemeConfigurable: UIViewController {
 extension ThemeConfigurable {
     func applyTheme() {
         configureStatusBar()
-        configureNavigationBar()
+        configureNavigationItem()
     }
     
     private func configureStatusBar() {
@@ -22,7 +22,7 @@ extension ThemeConfigurable {
         navigationController?.navigationBar.barStyle = .black
     }
     
-    private func configureNavigationBar() {
+    private func configureNavigationItem() {
         let logoImageView = UIImageView(image: .init(named: "LogoTypo"))
         logoImageView.tintColor = .white
         logoImageView.contentMode = .scaleAspectFit
@@ -56,6 +56,9 @@ extension UINavigationController {
 
 extension UIColor {
     static var texasRose: UIColor = .init(named: "Texas Rose") ?? .systemOrange
-    static var pampas: UIColor = .init(named: "Pampas") ?? .secondarySystemBackground
+    static var pampas: UIColor = .init(named: "Pampas") ?? .tertiarySystemBackground
+    static var rum: UIColor = .init(named: "Rum") ?? .secondarySystemBackground
+    static var saffronMango: UIColor = .init(named: "Saffron Mango") ?? .systemYellow
 }
+
 
