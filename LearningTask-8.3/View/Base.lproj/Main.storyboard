@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JtD-5n-OcP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PPv-UE-OYf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +15,7 @@
             <objects>
                 <navigationController id="PPv-UE-OYf" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="G6h-Jm-Bdk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Texas Rose"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -25,6 +27,9 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
+                    <connections>
+                        <segue destination="JtD-5n-OcP" kind="relationship" relationship="rootViewController" id="pMW-bO-DjI"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Th-jh-QOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +40,7 @@
             <objects>
                 <collectionViewController id="JtD-5n-OcP" customClass="LivrosListViewController" customModule="LearningTask_8_3" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="p6A-Yt-GLA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Pampas"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="24" minimumInteritemSpacing="20" id="A1d-GR-Hel">
@@ -80,6 +85,7 @@
                                 <connections>
                                     <outlet property="capaImageView" destination="qFW-ie-V9f" id="R84-P5-9bF"/>
                                     <outlet property="tituloLabel" destination="hXg-v6-TNZ" id="5r0-Qx-JEp"/>
+                                    <segue destination="Mu8-1k-nec" kind="show" identifier="seeBookDetailsSegue" id="EqP-wf-XcH"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -107,19 +113,112 @@
                             <outlet property="delegate" destination="JtD-5n-OcP" id="hbb-8q-Lzy"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="jUx-wp-mmV"/>
+                    <navigationItem key="navigationItem" id="jUx-wp-mmV">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="TEB-1s-glU"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1E-g4-qWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="14" y="79"/>
+        </scene>
+        <!--Book Details View Controller-->
+        <scene sceneID="U8j-Aj-vvg">
+            <objects>
+                <tableViewController id="Mu8-1k-nec" customClass="BookDetailsViewController" customModule="LearningTask_8_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bfG-XE-5cz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="quaternaryLabelColor"/>
+                        <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TipoDeLivroViewCell" id="k2Q-0l-rQC" customClass="TipoDeLivroViewCell" customModule="LearningTask_8_3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="414" height="75.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k2Q-0l-rQC" id="fjT-ed-c8N">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Z5M-hf-uVo" userLabel="Container Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="T2y-An-Ime" userLabel="Info Stack View">
+                                                    <rect key="frame" x="20" y="16" width="100" height="43"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo do Livro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AV1-oU-D0E" userLabel="Tipo de Livro Label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d3-fc-EpX" userLabel="Preco Label">
+                                                            <rect key="frame" x="0.0" y="23.5" width="100" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du7-aW-7Wi">
+                                                    <rect key="frame" x="288.5" y="16" width="105.5" height="33.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="COMPRAR">
+                                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                                        <color key="baseForegroundColor" name="Pampas"/>
+                                                        <color key="baseBackgroundColor" name="Saffron Mango"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="20" bottom="16" trailing="20"/>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="Rum"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Z5M-hf-uVo" secondAttribute="bottom" id="Pqo-0L-Xk3"/>
+                                        <constraint firstItem="Z5M-hf-uVo" firstAttribute="leading" secondItem="fjT-ed-c8N" secondAttribute="leading" id="jkD-D3-aB1"/>
+                                        <constraint firstAttribute="trailing" secondItem="Z5M-hf-uVo" secondAttribute="trailing" id="rlw-P5-Kbd"/>
+                                        <constraint firstItem="Z5M-hf-uVo" firstAttribute="top" secondItem="fjT-ed-c8N" secondAttribute="top" id="vpW-xD-JiK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="precoLabel" destination="5d3-fc-EpX" id="F7f-rH-wF3"/>
+                                    <outlet property="tipoDeLivroLabel" destination="AV1-oU-D0E" id="65C-JA-tf9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mu8-1k-nec" id="rUM-8R-myN"/>
+                            <outlet property="delegate" destination="Mu8-1k-nec" id="9p0-Vb-9qt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="rH7-wR-m9E"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Tf-uS-cea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="78"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="Pampas">
             <color red="0.98400002717971802" green="0.98000001907348633" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Rum">
+            <color red="0.94900000095367432" green="0.94099998474121094" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Saffron Mango">
+            <color red="0.98000001907348633" green="0.76899999380111694" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Texas Rose">
             <color red="1" green="0.66699999570846558" blue="0.37599998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

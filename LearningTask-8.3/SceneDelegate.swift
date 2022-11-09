@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let livrosAPI = LivrosAPI()
         
-        let livrosListViewController = window!.rootViewController as! LivrosListViewController
+        let livrosListViewController = (window!.rootViewController as! UINavigationController).topViewController as! LivrosListViewController
         livrosListViewController.livrosAPI = livrosAPI
     }
 
