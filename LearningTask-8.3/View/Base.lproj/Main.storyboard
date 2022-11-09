@@ -139,11 +139,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Z5M-hf-uVo" userLabel="Container Stack View">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z5M-hf-uVo" userLabel="Container Stack View">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="75.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="T2y-An-Ime" userLabel="Info Stack View">
-                                                    <rect key="frame" x="20" y="16" width="100" height="43"/>
+                                                    <rect key="frame" x="20" y="16.5" width="100" height="43"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo do Livro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AV1-oU-D0E" userLabel="Tipo de Livro Label">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="19.5"/>
@@ -160,7 +160,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du7-aW-7Wi">
-                                                    <rect key="frame" x="288.5" y="16" width="105.5" height="33.5"/>
+                                                    <rect key="frame" x="288.5" y="21" width="105.5" height="33.5"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="COMPRAR">
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>

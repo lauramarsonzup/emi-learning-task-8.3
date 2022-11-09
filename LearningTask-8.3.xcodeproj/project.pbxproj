@@ -11,6 +11,7 @@
 		03CC2B35291C1C7E003B7AA8 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B34291C1C7E003B7AA8 /* BookDetailsViewController.swift */; };
 		03CC2B38291C1F02003B7AA8 /* TipoDeLivroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B37291C1F02003B7AA8 /* TipoDeLivroViewCell.swift */; };
 		03CC2B3A291C271C003B7AA8 /* BookDetailsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B39291C271C003B7AA8 /* BookDetailsTableHeaderView.swift */; };
+		03CC2B3C291C42CF003B7AA8 /* BookDetailsTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B3B291C42CF003B7AA8 /* BookDetailsTableFooterView.swift */; };
 		583A3A06287847E8002C6288 /* SectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A3A05287847E8002C6288 /* SectionTitleView.swift */; };
 		583A3A0828784C57002C6288 /* CarrinhoSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A3A0728784C57002C6288 /* CarrinhoSectionHeaderView.swift */; };
 		5840B53728646180000FA9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B53628646180000FA9FC /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 		03CC2B34291C1C7E003B7AA8 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		03CC2B37291C1F02003B7AA8 /* TipoDeLivroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoDeLivroViewCell.swift; sourceTree = "<group>"; };
 		03CC2B39291C271C003B7AA8 /* BookDetailsTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsTableHeaderView.swift; sourceTree = "<group>"; };
+		03CC2B3B291C42CF003B7AA8 /* BookDetailsTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsTableFooterView.swift; sourceTree = "<group>"; };
 		583A3A05287847E8002C6288 /* SectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleView.swift; sourceTree = "<group>"; };
 		583A3A0728784C57002C6288 /* CarrinhoSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoSectionHeaderView.swift; sourceTree = "<group>"; };
 		5840B53328646180000FA9FC /* LearningTask-8.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-8.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 			children = (
 				03CC2B37291C1F02003B7AA8 /* TipoDeLivroViewCell.swift */,
 				03CC2B39291C271C003B7AA8 /* BookDetailsTableHeaderView.swift */,
+				03CC2B3B291C42CF003B7AA8 /* BookDetailsTableFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				03CC2B32291C19E4003B7AA8 /* Preco.swift in Sources */,
 				5840B53728646180000FA9FC /* AppDelegate.swift in Sources */,
 				03CC2B3A291C271C003B7AA8 /* BookDetailsTableHeaderView.swift in Sources */,
+				03CC2B3C291C42CF003B7AA8 /* BookDetailsTableFooterView.swift in Sources */,
 				5840B53928646180000FA9FC /* SceneDelegate.swift in Sources */,
 				5840B55E2864660F000FA9FC /* LivroCollectionViewCell.swift in Sources */,
 				5840B5602864669C000FA9FC /* LivroSectionHeaderView.swift in Sources */,

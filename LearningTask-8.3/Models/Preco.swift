@@ -13,7 +13,7 @@ struct Preco {
 }
 
 enum TipoDeLivro: String {
-    case ebook = "E-book"
+    case ebook = "E-book*"
     case impresso = "Impresso"
     case combo = "E-book + Impresso"
 }

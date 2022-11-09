@@ -18,11 +18,21 @@ class BookDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        guard let livro = livro else { return }
+        tableView.tableHeaderView = BookDetailsTableHeaderView.constroi(para: livro)
+        tableView.tableFooterView = BookDetailsTableFooterView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 20))
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        guard let headerView = tableView.tableHeaderView else {return}
+        let size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        if headerView.frame.size.height != size.height {
+            headerView.frame.size.height = size.height
+            tableView.tableHeaderView = headerView
+            tableView.layoutIfNeeded()
+        }
     }
 
     // MARK: - Table view data source
