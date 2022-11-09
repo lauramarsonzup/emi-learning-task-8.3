@@ -12,6 +12,7 @@
 		03CC2B38291C1F02003B7AA8 /* TipoDeLivroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B37291C1F02003B7AA8 /* TipoDeLivroViewCell.swift */; };
 		03CC2B3A291C271C003B7AA8 /* BookDetailsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B39291C271C003B7AA8 /* BookDetailsTableHeaderView.swift */; };
 		03CC2B3C291C42CF003B7AA8 /* BookDetailsTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B3B291C42CF003B7AA8 /* BookDetailsTableFooterView.swift */; };
+		03CC2B3F291C5349003B7AA8 /* CarrinhoDeComprasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B3E291C5349003B7AA8 /* CarrinhoDeComprasViewController.swift */; };
 		583A3A06287847E8002C6288 /* SectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A3A05287847E8002C6288 /* SectionTitleView.swift */; };
 		583A3A0828784C57002C6288 /* CarrinhoSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A3A0728784C57002C6288 /* CarrinhoSectionHeaderView.swift */; };
 		5840B53728646180000FA9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5840B53628646180000FA9FC /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		03CC2B37291C1F02003B7AA8 /* TipoDeLivroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoDeLivroViewCell.swift; sourceTree = "<group>"; };
 		03CC2B39291C271C003B7AA8 /* BookDetailsTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsTableHeaderView.swift; sourceTree = "<group>"; };
 		03CC2B3B291C42CF003B7AA8 /* BookDetailsTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsTableFooterView.swift; sourceTree = "<group>"; };
+		03CC2B3E291C5349003B7AA8 /* CarrinhoDeComprasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoDeComprasViewController.swift; sourceTree = "<group>"; };
 		583A3A05287847E8002C6288 /* SectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleView.swift; sourceTree = "<group>"; };
 		583A3A0728784C57002C6288 /* CarrinhoSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoSectionHeaderView.swift; sourceTree = "<group>"; };
 		5840B53328646180000FA9FC /* LearningTask-8.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-8.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,14 @@
 				03CC2B3B291C42CF003B7AA8 /* BookDetailsTableFooterView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		03CC2B3D291C532F003B7AA8 /* CarrinhoDeCompras */ = {
+			isa = PBXGroup;
+			children = (
+				03CC2B3E291C5349003B7AA8 /* CarrinhoDeComprasViewController.swift */,
+			);
+			path = CarrinhoDeCompras;
 			sourceTree = "<group>";
 		};
 		583A3A04287847C8002C6288 /* Componentes */ = {
@@ -134,6 +144,7 @@
 			children = (
 				5840B55928646428000FA9FC /* ListaDeLivros */,
 				03CC2B33291C1C2B003B7AA8 /* DetalhesDoLivro */,
+				03CC2B3D291C532F003B7AA8 /* CarrinhoDeCompras */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CC2B3F291C5349003B7AA8 /* CarrinhoDeComprasViewController.swift in Sources */,
 				5840B551286462C0000FA9FC /* Autor.swift in Sources */,
 				583A3A0828784C57002C6288 /* CarrinhoSectionHeaderView.swift in Sources */,
 				03CC2B35291C1C7E003B7AA8 /* BookDetailsViewController.swift in Sources */,

@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -167,6 +168,10 @@
                                                         <color key="baseForegroundColor" name="Pampas"/>
                                                         <color key="baseBackgroundColor" name="Saffron Mango"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="comprarBotaoPressionado:" destination="k2Q-0l-rQC" eventType="touchUpInside" id="p7D-gj-PI0"/>
+                                                        <segue destination="PIv-Oo-R98" kind="showDetail" identifier="carrinhoDeComprasSegue" id="E2K-nZ-Q98"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="20" bottom="16" trailing="20"/>
@@ -196,6 +201,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tf-uS-cea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="855" y="78"/>
+        </scene>
+        <!--Carrinho De Compras View Controller-->
+        <scene sceneID="aO4-ft-izr">
+            <objects>
+                <viewController id="PIv-Oo-R98" customClass="CarrinhoDeComprasViewController" customModule="LearningTask_8_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Am-pB-hIv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Clz-Pn-RLg">
+                                <rect key="frame" x="0.0" y="48" width="414" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg7-NB-KUz">
+                                <rect key="frame" x="0.0" y="794" width="414" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9q-pp-BgW">
+                                        <rect key="frame" x="172.5" y="10" width="69.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Rum"/>
+                                <constraints>
+                                    <constraint firstItem="j9q-pp-BgW" firstAttribute="centerX" secondItem="bg7-NB-KUz" secondAttribute="centerX" id="K8g-dF-xGa"/>
+                                    <constraint firstItem="j9q-pp-BgW" firstAttribute="centerY" secondItem="bg7-NB-KUz" secondAttribute="centerY" id="Nl4-Jt-fKb"/>
+                                    <constraint firstAttribute="height" constant="44" id="uOV-C6-sTe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mln-yv-aPg"/>
+                        <color key="backgroundColor" name="Rum"/>
+                        <constraints>
+                            <constraint firstItem="bg7-NB-KUz" firstAttribute="top" secondItem="Clz-Pn-RLg" secondAttribute="bottom" id="26E-9I-KY0"/>
+                            <constraint firstItem="mln-yv-aPg" firstAttribute="trailing" secondItem="bg7-NB-KUz" secondAttribute="trailing" id="Ao4-l6-tcn"/>
+                            <constraint firstItem="Clz-Pn-RLg" firstAttribute="leading" secondItem="mln-yv-aPg" secondAttribute="leading" id="D1a-UC-l5g"/>
+                            <constraint firstItem="mln-yv-aPg" firstAttribute="bottom" secondItem="bg7-NB-KUz" secondAttribute="bottom" id="FPB-R3-eWO"/>
+                            <constraint firstItem="bg7-NB-KUz" firstAttribute="leading" secondItem="mln-yv-aPg" secondAttribute="leading" id="OXF-SQ-q6a"/>
+                            <constraint firstItem="Clz-Pn-RLg" firstAttribute="top" secondItem="mln-yv-aPg" secondAttribute="top" id="P36-5V-iP2"/>
+                            <constraint firstItem="mln-yv-aPg" firstAttribute="trailing" secondItem="Clz-Pn-RLg" secondAttribute="trailing" id="Q2G-KZ-lAL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ib7-hk-i5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648" y="78"/>
         </scene>
     </scenes>
     <resources>
