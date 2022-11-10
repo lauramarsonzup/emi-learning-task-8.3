@@ -48,27 +48,32 @@ class BookDetailsViewController: UITableViewController {
         }
 
         cell.preco = livro!.precos[indexPath.row]
+        cell.buttonTag = indexPath.row
 
         return cell
     }
     
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        guard segue.identifier == "carrinhoDeComprasSegue" else { return }
+        
+        guard let button = sender as? UIButton else {
+            fatalError("Não foi possível preparar para segue \(segue.identifier!)")
+        } //o sender é um botão e não a cell
 
-}
-
-// MARK: - Comprar Livro Delegate
-extension BookDetailsViewController: ComprarLivroDelegate {
-    func adicionarAoCarrinho(preco: Preco) {
-        //
+        guard let destinationController = segue.destination as? CarrinhoDeComprasViewController,
+                let livro = livro else {
+            fatalError("Não foi possível preparar para segue \(segue.identifier!)")
+        }
+        
+        let itemDeCompra = ItemDeCompra(livro: livro, preco: livro.precos[button.tag])
+        CarrinhoDeCompras.itens.append(itemDeCompra)
+        
+        destinationController.itensDoCarrinho = CarrinhoDeCompras.itens
+        destinationController.valorTotalDoCarrinho = CarrinhoDeCompras.valorTotal()
     }
-    
+
 }

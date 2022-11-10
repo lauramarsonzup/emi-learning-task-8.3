@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031A7DF5291D4D220062EAFD /* ItemDeCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A7DF4291D4D220062EAFD /* ItemDeCompra.swift */; };
+		031A7DF7291D4D640062EAFD /* CarrinhoDeCompras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A7DF6291D4D640062EAFD /* CarrinhoDeCompras.swift */; };
+		031A7DF9291D50160062EAFD /* ItemDeCompraViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A7DF8291D50160062EAFD /* ItemDeCompraViewCell.swift */; };
+		03C4182A291D7B4100C3A48B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C41829291D7B4100C3A48B /* Formatter.swift */; };
 		03CC2B32291C19E4003B7AA8 /* Preco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B31291C19E4003B7AA8 /* Preco.swift */; };
 		03CC2B35291C1C7E003B7AA8 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B34291C1C7E003B7AA8 /* BookDetailsViewController.swift */; };
 		03CC2B38291C1F02003B7AA8 /* TipoDeLivroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CC2B37291C1F02003B7AA8 /* TipoDeLivroViewCell.swift */; };
@@ -30,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031A7DF4291D4D220062EAFD /* ItemDeCompra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDeCompra.swift; sourceTree = "<group>"; };
+		031A7DF6291D4D640062EAFD /* CarrinhoDeCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoDeCompras.swift; sourceTree = "<group>"; };
+		031A7DF8291D50160062EAFD /* ItemDeCompraViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDeCompraViewCell.swift; sourceTree = "<group>"; };
+		03C41829291D7B4100C3A48B /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		03CC2B31291C19E4003B7AA8 /* Preco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preco.swift; sourceTree = "<group>"; };
 		03CC2B34291C1C7E003B7AA8 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		03CC2B37291C1F02003B7AA8 /* TipoDeLivroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoDeLivroViewCell.swift; sourceTree = "<group>"; };
@@ -65,6 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031A7DF3291D47C00062EAFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				583A3A0728784C57002C6288 /* CarrinhoSectionHeaderView.swift */,
+				031A7DF8291D50160062EAFD /* ItemDeCompraViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03C41828291D7B2F00C3A48B /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				03C41829291D7B4100C3A48B /* Formatter.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		03CC2B33291C1C2B003B7AA8 /* DetalhesDoLivro */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				03CC2B3E291C5349003B7AA8 /* CarrinhoDeComprasViewController.swift */,
+				031A7DF3291D47C00062EAFD /* View */,
 			);
 			path = CarrinhoDeCompras;
 			sourceTree = "<group>";
@@ -119,13 +145,13 @@
 		5840B53528646180000FA9FC /* LearningTask-8.3 */ = {
 			isa = PBXGroup;
 			children = (
+				03C41828291D7B2F00C3A48B /* Commons */,
 				5840B55828646384000FA9FC /* Supportive Files */,
 				5840B53F28646186000FA9FC /* Assets.xcassets */,
 				5840B55728646381000FA9FC /* API */,
 				5840B5562864637C000FA9FC /* Models */,
 				5840B55428646372000FA9FC /* View */,
 				5840B55528646377000FA9FC /* Scenes */,
-				583A3A0728784C57002C6288 /* CarrinhoSectionHeaderView.swift */,
 			);
 			path = "LearningTask-8.3";
 			sourceTree = "<group>";
@@ -155,6 +181,8 @@
 				5840B550286462C0000FA9FC /* Autor.swift */,
 				5840B552286462D4000FA9FC /* Livro.swift */,
 				03CC2B31291C19E4003B7AA8 /* Preco.swift */,
+				031A7DF4291D4D220062EAFD /* ItemDeCompra.swift */,
+				031A7DF6291D4D640062EAFD /* CarrinhoDeCompras.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,16 +299,20 @@
 				03CC2B3F291C5349003B7AA8 /* CarrinhoDeComprasViewController.swift in Sources */,
 				5840B551286462C0000FA9FC /* Autor.swift in Sources */,
 				583A3A0828784C57002C6288 /* CarrinhoSectionHeaderView.swift in Sources */,
+				03C4182A291D7B4100C3A48B /* Formatter.swift in Sources */,
 				03CC2B35291C1C7E003B7AA8 /* BookDetailsViewController.swift in Sources */,
 				5840B553286462D4000FA9FC /* Livro.swift in Sources */,
 				5840B55B2864643F000FA9FC /* LivrosListViewController.swift in Sources */,
 				583A3A06287847E8002C6288 /* SectionTitleView.swift in Sources */,
+				031A7DF7291D4D640062EAFD /* CarrinhoDeCompras.swift in Sources */,
 				03CC2B38291C1F02003B7AA8 /* TipoDeLivroViewCell.swift in Sources */,
 				5840B54F286462A3000FA9FC /* LivrosAPI.swift in Sources */,
+				031A7DF9291D50160062EAFD /* ItemDeCompraViewCell.swift in Sources */,
 				5840B54B28646211000FA9FC /* Theme.swift in Sources */,
 				03CC2B32291C19E4003B7AA8 /* Preco.swift in Sources */,
 				5840B53728646180000FA9FC /* AppDelegate.swift in Sources */,
 				03CC2B3A291C271C003B7AA8 /* BookDetailsTableHeaderView.swift in Sources */,
+				031A7DF5291D4D220062EAFD /* ItemDeCompra.swift in Sources */,
 				03CC2B3C291C42CF003B7AA8 /* BookDetailsTableFooterView.swift in Sources */,
 				5840B53928646180000FA9FC /* SceneDelegate.swift in Sources */,
 				5840B55E2864660F000FA9FC /* LivroCollectionViewCell.swift in Sources */,

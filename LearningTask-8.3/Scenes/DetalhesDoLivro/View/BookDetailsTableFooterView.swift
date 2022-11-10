@@ -29,7 +29,6 @@ class BookDetailsTableFooterView: UIView {
     }
     
     private func setup() {
-        backgroundColor = .pampas
         addViews()
         addConstraints()
     }

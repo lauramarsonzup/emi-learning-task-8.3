@@ -7,28 +7,25 @@
 
 import UIKit
 
-protocol ComprarLivroDelegate {
-    func adicionarAoCarrinho(preco: Preco)
-}
-
 class TipoDeLivroViewCell: UITableViewCell {
     
     @IBOutlet private weak var tipoDeLivroLabel: UILabel!
     @IBOutlet private weak var precoLabel: UILabel!
+    @IBOutlet weak var comprarButton: UIButton!
     
-    var delegate: ComprarLivroDelegate?
+    var buttonTag: Int? {
+        didSet {
+            guard let buttonTag = buttonTag else { return }
+            comprarButton.tag = buttonTag
+        }
+    }
     
     var preco: Preco? {
         didSet {
             guard let preco = preco else { return }
             
             tipoDeLivroLabel.text = preco.tipoDeLivro.rawValue
-            precoLabel.text = String(describing: preco.valor)
+            precoLabel.text = Formatter.paraMoeda(decimal: preco.valor)
         }
-    }
-    
-    @IBAction func comprarBotaoPressionado(_ sender: UIButton?) {
-        guard let preco = preco else { return }
-        delegate?.adicionarAoCarrinho(preco: preco)
     }
 }
